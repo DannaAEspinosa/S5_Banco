@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="318.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="amountTF" layoutX="26.0" layoutY="89.0" />
+      <TextField fx:id="amountTF" layoutX="26.0" layoutY="89.0" promptText="Ej:0.0" />
       <TextField fx:id="descriptionTF" layoutX="19.0" layoutY="306.0" prefHeight="109.0" prefWidth="239.0" promptText="INSERT A SHORT DESCRIPTION" />
-      <DatePicker fx:id="dateNowDP" layoutX="27.0" layoutY="469.0" />
-      <Label layoutX="37.0" layoutY="50.0" text=" Amount Income" />
-      <Label layoutX="21.0" layoutY="262.0" text="Description" />
-      <Label layoutX="27.0" layoutY="437.0" text="Date" />
-      <Button fx:id="addBTTN" layoutX="107.0" layoutY="554.0" mnemonicParsing="false" onAction="#addNewIncome" text="Add" />
-      <TextField fx:id="amountExpenseTF" layoutX="26.0" layoutY="195.0" />
-      <Label layoutX="37.0" layoutY="153.0" text="Amount Expense" />
+      <DatePicker fx:id="dateNowDP" layoutX="27.0" layoutY="469.0" prefHeight="31.0" prefWidth="239.0" promptText="enter the registration date" />
+      <Label layoutX="37.0" layoutY="50.0" text=" Amount Income" textFill="WHITE" />
+      <Label layoutX="21.0" layoutY="262.0" text="Description" textFill="WHITE" />
+      <Label layoutX="27.0" layoutY="437.0" text="Date" textFill="WHITE" />
+      <Button fx:id="addBTTN" layoutX="107.0" layoutY="554.0" mnemonicParsing="false" onAction="#addNewIncome" style="-fx-background-color: white;" text="Add" />
+      <TextField fx:id="amountExpenseTF" layoutX="26.0" layoutY="195.0" promptText="Eje:0.0" />
+      <Label layoutX="37.0" layoutY="153.0" text="Amount Expense" textFill="WHITE" />
    </children>
 </AnchorPane>

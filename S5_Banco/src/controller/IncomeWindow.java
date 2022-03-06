@@ -2,8 +2,6 @@ package controller;
 
 import java.net.URL;
 import java.time.LocalDate;
-import java.time.chrono.ChronoLocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -41,9 +39,9 @@ public class IncomeWindow implements Initializable {
 		double resBalance = balanceOperation(amount, amountExpense);
 		
 		LocalDate dateNow = dateNowDP.getValue();
-		String myFormattedDate = dateNow.format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+		
 
-		Banco bc = new Banco(amount, desc, amountExpense, myFormattedDate,resBalance);
+		Banco bc = new Banco(amount, desc, amountExpense, dateNow,resBalance);
 		BancoData.data.add(bc);
 
 		Stage stage = (Stage) amountTF.getScene().getWindow();

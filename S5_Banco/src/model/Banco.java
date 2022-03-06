@@ -1,10 +1,6 @@
 package model;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 
 public class Banco {
 	double amount;
@@ -12,7 +8,7 @@ public class Banco {
 	//Date now;
 	double amountExpense;
 	double balance;
-	String dateNow;
+	LocalDate dateNow;
 	
 
 	
@@ -73,7 +69,7 @@ public class Banco {
 
 
 
-	public Banco(double amount, String description, double amountExpense,String dateNow ,double balance) {
+	public Banco(double amount, String description, double amountExpense,LocalDate dateNow ,double balance) {
 		super();
 		this.amount = amount;
 		this.description = description;
@@ -85,14 +81,14 @@ public class Banco {
 
 
 
-	public String getDateNow() {
+	public LocalDate getDateNow() {
 		return dateNow;
 	}
 
 
 
 
-	public void setDateNow(String dateNow) {
+	public void setDateNow(LocalDate dateNow) {
 		this.dateNow = dateNow;
 	}
 

@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="973.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="973.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TableView fx:id="tableBancoTV" layoutX="293.0" layoutY="73.0" prefHeight="313.0" prefWidth="576.0" style="-fx-background-color: grey;">
+      <TableView fx:id="tableBancoTV" layoutX="293.0" layoutY="73.0" prefHeight="313.0" prefWidth="576.0" style="-fx-background-color: white;">
         <columns>
           <TableColumn fx:id="incomeTC" prefWidth="100.0" text="INCOME" />
           <TableColumn fx:id="expenseTC" prefWidth="118.0" text="EXPENSES" />
@@ -24,7 +24,7 @@
             <TableColumn fx:id="descriptionTC" prefWidth="132.0" text="DESCRIPTION" />
         </columns>
       </TableView>
-      <MenuBar layoutX="6.0" layoutY="14.0" prefHeight="40.0" prefWidth="175.0" style="-fx-background-color: white;">
+      <MenuBar fx:id="mBar" layoutX="6.0" layoutY="14.0" prefHeight="40.0" prefWidth="175.0" style="-fx-background-color: white;">
         <menus>
           <Menu mnemonicParsing="false" text="Information">
             <items>
@@ -39,20 +39,30 @@
                     <MenuItem fx:id="dIncomeMI" mnemonicParsing="false" onAction="#delete" text="Delete Information" />
                   </items>
                 </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu fx:id="filter" mnemonicParsing="false" text="Filter">
+                    <items>
+                      <MenuItem fx:id="filterTableMI" mnemonicParsing="false" onAction="#filterForDate" text="Filer for date" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="noFilterMI" mnemonicParsing="false" text="No Filter" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    </items>
+                  </Menu>
             </items>
           </Menu>
             <Menu mnemonicParsing="false" onAction="#exitP" text="Exit" />
         </menus>
       </MenuBar>
-      <DatePicker fx:id="initDateDP" layoutX="29.0" layoutY="143.0" style="-fx-background-color: grey;" />
-      <DatePicker fx:id="finalDateDP" layoutX="29.0" layoutY="229.0" style="-fx-background-color: grey;" />
-      <Button fx:id="filterBTTN" layoutX="94.0" layoutY="306.0" mnemonicParsing="false" onAction="#filterForDate" style="-fx-background-color: BLACK;" text="Filter" textFill="WHITE" />
+      <DatePicker fx:id="initDateDP" layoutX="29.0" layoutY="143.0" promptText="enter a date" style="-fx-background-color: grey;" />
+      <DatePicker fx:id="finalDateDP" layoutX="29.0" layoutY="229.0" promptText="enter a date" style="-fx-background-color: grey;" />
       <TextArea fx:id="incomeTA" layoutX="295.0" layoutY="494.0" prefHeight="48.0" prefWidth="175.0" />
       <TextArea fx:id="expensesTA" layoutX="500.0" layoutY="494.0" prefHeight="48.0" prefWidth="175.0" />
       <TextArea fx:id="balanceTA" layoutX="702.0" layoutY="494.0" prefHeight="48.0" prefWidth="175.0" />
-      <Label layoutX="500.0" layoutY="467.0" text="TOTAL EXPENSES" />
-      <Label layoutX="305.0" layoutY="467.0" text="TOTAL INCOME" />
-      <Label layoutX="702.0" layoutY="467.0" text="TOTAL BALANCE SHEET" />
+      <Label layoutX="500.0" layoutY="467.0" text="TOTAL EXPENSES" textFill="WHITE" />
+      <Label layoutX="305.0" layoutY="467.0" text="TOTAL INCOME" textFill="WHITE" />
+      <Label layoutX="702.0" layoutY="467.0" text="TOTAL BALANCE SHEET" textFill="WHITE" />
       <Button fx:id="refreshBTTN" layoutX="526.0" layoutY="562.0" mnemonicParsing="false" onAction="#refreshTotals" text="Refresh Total" />
+      <Label layoutX="38.0" layoutY="112.0" text="initial date" textFill="#f5f5f5" />
+      <Label layoutX="38.0" layoutY="196.0" text="final date" textFill="WHITE" />
    </children>
 </AnchorPane>
